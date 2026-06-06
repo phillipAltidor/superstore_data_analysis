@@ -1,0 +1,6 @@
+.DS_Store
+.matplotlib/
+__pycache__/
+.pycache/
+*.pyc
+.ipynb_checkpoints/
