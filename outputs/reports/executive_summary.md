@@ -100,4 +100,4 @@ Analyze four years of Superstore transactional data to identify the root causes 
 
 ---
 
-*Analysis conducted using Python (pandas, statsmodels, scipy, matplotlib, seaborn). All notebooks and SQL queries available in the project repository.*
+*Analysis conducted using Python (pandas, statsmodels, scipy, matplotlib, seaborn). All notebooks and supporting outputs are available in the project repository.*

@@ -2,7 +2,7 @@
 
 **Four-year analysis of a $2.3M retail operation — identifying the root causes of profit leakage and delivering quantified, prioritized recommendations.**
 
-Built as a senior-analyst portfolio project using the Tableau Sample Superstore dataset (9,993 transactions, 2014–2017). The analysis moves through a full analytics pipeline: data profiling and cleaning → exploratory analysis → statistical profitability analysis → customer segmentation → executive reporting.
+Built as a senior-analyst portfolio project using the Tableau Sample Superstore dataset (9,993 transactions, 2014–2017). The analysis moves through a full analytics pipeline: data profiling and cleaning → exploratory analysis → statistical profitability analysis → customer segmentation → executive reporting → Tableau dashboards.
 
 ---
 
@@ -25,20 +25,11 @@ Built as a senior-analyst portfolio project using the Tableau Sample Superstore 
 │   ├── 03_profitability.ipynb                # OLS regression, Welch's t-test, scenario table
 │   ├── 04_customer_segmentation.ipynb        # RFM scoring and segment profiling
 │   └── 05_executive_summary.ipynb            # KPI dashboard and written findings
-├── sql/
-│   ├── 01_sales_profit_by_category.sql
-│   ├── 02_discount_loss_by_region.sql
-│   ├── 03_top_bottom_subcategories.sql
-│   ├── 04_customer_revenue_base.sql
-│   └── 05_yoy_performance.sql
-├── src/
-│   └── generate_excel_report.py              # automated Excel workbook (xlsxwriter)
 ├── outputs/
-│   ├── figures/                              # 13 saved charts
+│   ├── figures/                              # saved charts from notebooks
 │   └── reports/
 │       ├── executive_summary.md              # polished written report
-│       ├── executive_summary.html            # notebook export
-│       └── Superstore_Executive_Report.xlsx  # automated Excel dashboard
+│       └── executive_summary.html            # notebook export
 ├── data/
 │   ├── raw/                                  # original source CSV
 │   └── processed/                            # cleaned data + RFM output
@@ -64,8 +55,11 @@ Aggregated performance across Category, Region, Customer Segment, and Sub-Catego
 **4 — Customer Segmentation (RFM)**
 Scored customers on Recency, Frequency, and Monetary quartiles. Applied a rule-based segment classifier to assign Champion, Loyal, New Customer, At Risk, Cannot Lose, and Inactive / Low Value labels. Threshold values derived dynamically using `pd.qcut` — not hard-coded.
 
-**5 — Excel Report Automation**
-Single-command Python script generates a five-sheet Excel workbook: executive dashboard with KPI cards and callout boxes, sales summary with sub-category chart, discount impact analysis, RFM segment breakdown, and a cleaned data export with autofilter.
+**5 — Executive Summary**
+Consolidated KPI dashboard and written findings synthesizing results from notebooks 2–4. Outputs cleaned data and summary tables used as the data source for Tableau dashboards.
+
+**6 — Tableau Dashboards** *(in progress)*
+Interactive dashboards translating the notebook findings into business-facing visuals. Planned views: sales and profit performance by region and category, discount impact analysis, and RFM customer segment breakdown.
 
 ---
 
@@ -85,8 +79,8 @@ Single-command Python script generates a five-sheet Excel workbook: executive da
 | Data wrangling | Python, pandas, numpy |
 | Visualization | matplotlib, seaborn |
 | Statistics | scipy (Welch's t-test), statsmodels (OLS regression) |
-| Reporting | xlsxwriter, nbconvert |
-| SQL | DuckDB-compatible analytical queries |
+| Dashboards | Tableau |
+| Reporting | nbconvert |
 
 ---
 
@@ -98,7 +92,4 @@ pip install -r requirements.txt
 
 # Run notebooks in order (01 → 05)
 # Each notebook saves its outputs before the next begins
-
-# Regenerate the Excel report from processed data
-python3 src/generate_excel_report.py
 ```

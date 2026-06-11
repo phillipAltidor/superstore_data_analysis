@@ -4,5 +4,4 @@ matplotlib
 seaborn
 scipy
 statsmodels
-xlsxwriter
 jupyter
