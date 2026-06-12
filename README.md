@@ -26,7 +26,7 @@ Built as a senior-analyst portfolio project using the Tableau Sample Superstore 
 │   ├── 04_customer_segmentation.ipynb        # RFM scoring and segment profiling
 │   └── 05_executive_summary.ipynb            # KPI dashboard and written findings
 ├── outputs/
-│   ├── figures/                              # saved charts from notebooks
+│   ├── figures/                              # saved charts and Tableau dashboard previews
 │   └── reports/
 │       ├── executive_summary.md              # polished written report
 │       └── executive_summary.html            # notebook export
@@ -58,8 +58,30 @@ Scored customers on Recency, Frequency, and Monetary quartiles. Applied a rule-b
 **5 — Executive Summary**
 Consolidated KPI dashboard and written findings synthesizing results from notebooks 2–4. Outputs cleaned data and summary tables used as the data source for Tableau dashboards.
 
-**6 — Tableau Dashboards** *(in progress)*
-Interactive dashboards translating the notebook findings into business-facing visuals. Planned views: sales and profit performance by region and category, discount impact analysis, and RFM customer segment breakdown.
+**6 — Tableau Dashboards**
+Built a three-dashboard Tableau suite translating the analysis into business-facing visuals: Business Overview, Discount Impact Analysis, and Customer Dashboard.
+
+---
+
+## Tableau Dashboard Suite
+
+The Tableau dashboard suite turns the notebook findings into an executive-facing workflow:
+
+1. **Business Overview** — summarizes revenue, profit, margin, sub-category performance, and regional profitability.
+2. **Discount Impact Analysis** — shows how average profit turns negative at higher discount rates and identifies discount-risk sub-categories.
+3. **Customer Dashboard** — profiles RFM customer segments, inactive customers, at-risk revenue, and champion customer value.
+
+### Business Overview
+
+![Business Overview Tableau dashboard](outputs/figures/tableau_business_overview.png)
+
+### Discount Impact Analysis
+
+![Discount Impact Tableau dashboard](outputs/figures/tableau_discount_impact.png)
+
+### Customer Dashboard
+
+![Customer Tableau dashboard](outputs/figures/tableau_customer_dashboard.png)
 
 ---
 
