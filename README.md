@@ -71,6 +71,8 @@ The Tableau dashboard suite turns the notebook findings into an executive-facing
 2. **Discount Impact Analysis** — shows how average profit turns negative at higher discount rates and identifies discount-risk sub-categories.
 3. **Customer Dashboard** — profiles RFM customer segments, inactive customers, at-risk revenue, and champion customer value.
 
+[View the interactive Tableau dashboard](https://public.tableau.com/views/SuperStore_Analysis_17812343233970/BusinessOverviewDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
 ### Business Overview
 
 ![Business Overview Tableau dashboard](outputs/figures/tableau_business_overview.png)
